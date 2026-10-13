@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05080f">
+<title>Match-3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="hud">
+    <div class="stars" id="stars" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="bar"><span id="barFill"></span></div>
+    <div class="hud-row">
+      <div class="side"><small>Nível</small><b id="level">1</b></div>
+      <div class="moves"><small>Jogadas</small><b id="moves">20</b></div>
+      <div class="side goal"><span id="goalIcon"><img src="img/ouro.png" alt="" draggable="false"></span><b id="goalTxt">0/15</b></div>
+    </div>
+    <div class="score">Pontos <b id="score">0</b> &nbsp; Recorde <b id="best">0</b></div>
+  </header>
+
+  <section class="board-wrap">
+    <div id="board" class="board" aria-label="Tabuleiro"></div>
+  </section>
+
+  <footer class="actions">
+    <button id="btnRestart" type="button">Reiniciar nível</button>
+    <button id="btnSound" type="button" aria-pressed="false">Som: ligado</button>
+  </footer>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="card">
+      <h2 id="mTitle"></h2>
+      <div class="mstars" id="mStars"></div>
+      <p id="mText"></p>
+      <button id="mBtn" type="button"></button>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
