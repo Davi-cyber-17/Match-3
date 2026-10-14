@@ -332,7 +332,7 @@ function fillBoard() {
 async function startLevel(n) {
   level = n; ended = false; busy = true; clearHint();
   levelStartScore = score;
-  moves = Math.min(20, 10 + Math.floor(n / 2));
+  moves = Math.min(15, 10 + Math.floor(n / 2));
   goalType = Math.floor(Math.random() * TYPES.length);
   goalNeed = Math.min(50, 12 + n * 3);
   goalHave = 0;
